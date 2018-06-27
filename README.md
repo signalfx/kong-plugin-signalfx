@@ -15,6 +15,9 @@ luarocks install --server=http://luarocks.org/manifests/signalfx kong-plugin-sig
 git clone git@github.com:signalfx/kong-plugin-signalfx.git
 cd kong-plugin-signalfx
 luarocks make
+
+# and be sure to notify Kong of the plugin
+
 echo 'custom_plugins = signalfx' > /etc/kong/signalfx.conf  # or add to your existing configuration file
 ```
 
