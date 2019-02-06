@@ -43,16 +43,25 @@ return {
         signalfx = aggregates,
       }
 
-      local ok, err = dao.db:reachable()
-      if not ok then
-        ngx.log(ngx.ERR, 'failed to reach database as part of ',
-                         '/signalfx endpoint: ', err)
+      local dbOk = false
+      local dbErr = nil
+      if dao.db then
+        dbOk, dbErr = dao.db:reachable()
+      else
+        dbOk, dbErr = kong.db.connector:connect()
+      end
 
+      if not dbOk then
+        ngx.log(ngx.ERR, 'failed to reach database as part of ',
+                         '/signalfx endpoint: ', dbErr)
       else
         status_response.database.database_reachable = true
       end
 
-      return helpers.responses.send_HTTP_OK(status_response)
+      if helpers.responses then
+        return helpers.responses.send_HTTP_OK(status_response)
+      end
+      return kong.response.exit(200, status_response)
     end
   }
 }
