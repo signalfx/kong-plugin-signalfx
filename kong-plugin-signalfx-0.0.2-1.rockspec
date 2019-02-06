@@ -1,12 +1,12 @@
 package = "kong-plugin-signalfx"
 
-version = "0.0.1-1"
+version = "0.0.2-1"
 
 supported_platforms = {"linux", "macosx"}
 
 source = {
   url = "git://github.com/signalfx/kong-plugin-signalfx",
-  tag = "0.0.1"
+  tag = "0.0.2"
 }
 
 description = {

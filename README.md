@@ -10,7 +10,7 @@ a `/signalfx` Admin API endpoint.
 To install this plugin from its source repository, run the following on each Kong server with a
 properly configured `LUA_PATH`:
 ```sh
-luarocks install --server=http://luarocks.org/manifests/signalfx kong-plugin-signalfx
+luarocks install kong-plugin-signalfx
 # or directly from the source repo
 git clone git@github.com:signalfx/kong-plugin-signalfx.git
 cd kong-plugin-signalfx
