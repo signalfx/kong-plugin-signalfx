@@ -1,4 +1,7 @@
+>ℹ️&nbsp;&nbsp;SignalFx was acquired by Splunk in October 2019. See [Splunk SignalFx](https://www.splunk.com/en_us/investor-relations/acquisitions/signalfx.html) for more information.
+
 # SignalFx Kong Plugin
+
 This [Kong plugin](https://getkong.org/docs/0.13.x/admin-api/#plugin-object) is intended for SignalFx users to obtain
 performance metrics from their Kong deployments for aggregation and reporting via the
 [Smart Agent](https://github.com/signalfx/signalfx-agent) or the
