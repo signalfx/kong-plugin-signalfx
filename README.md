@@ -6,6 +6,8 @@ performance metrics from their Kong deployments for aggregation and reporting vi
 plugins and provides connection state and request/response count, latency, status, and size metrics available through
 a `/signalfx` Admin API endpoint.
 
+**Note:** This integration is only supported for Kong Gateway Community Edition (CE).
+
 ### Installation
 To install this plugin from its source repository, run the following on each Kong server with a
 properly configured `LUA_PATH`:
